@@ -11,8 +11,8 @@ CMake has been used to buildl the library, CMakeLists.txt found in this reposito
 to the location of the eigen library directory.
 
 Library can be built using the following steps:
-cd <root project directory> <br \>
-<place all the source, include, and CMake files in the above directory> <br \>
-mkdir build && cd build <br \>
-cmake .. <br \>
-make .. <br \>
+cd <root project directory> <br />
+<place all the source, include, and CMake files in the above directory> <br />
+mkdir build && cd build <br />
+cmake .. <br />
+make .. <br />
