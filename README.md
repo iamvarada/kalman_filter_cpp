@@ -1,6 +1,6 @@
 # Kalman filter implementation in CPP
 
-Implementation of a basic kalman filter
+Implementation of a basic kalman filter <br />
 
 Equations of the filter are generic and can be referred from any common state estimation book or articles on the web.
 Eigen library is used for matrix/vector operations. 
@@ -10,7 +10,7 @@ Eigen library is used for matrix/vector operations.
 CMake has been used to buildl the library, CMakeLists.txt found in this repository can be used with appropriate changes
 to the location of the eigen library directory.
 
-Library can be built using the following steps:
+Library can be built using the following steps: <br />
 mkdir kalman_filter_cpp && cd kalman_filter_cpp <br />
 <place all the source, include, and CMake files in the above directory> <br />
 mkdir build && cd build <br />
