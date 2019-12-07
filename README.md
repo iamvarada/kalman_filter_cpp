@@ -10,7 +10,8 @@ Eigen library is used for matrix/vector operations.
 CMake has been used to buildl the library, CMakeLists.txt found in this repository can be used with appropriate changes
 to the location of the eigen library directory.
 
-Library can be built using the following steps: <br />
+<b> Library can be built using the following steps: </b> <br />
+
 mkdir kalman_filter_cpp && cd kalman_filter_cpp <br />
 <place all the source, include, and CMake files in the above directory> <br />
 mkdir build && cd build <br />
