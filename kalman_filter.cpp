@@ -8,8 +8,9 @@ BasicKalmanFilter::BasicKalmanFilter (
     const Eigen::MatrixXd &C,
     const Eigen::MatrixXd &Q,  
     const Eigen::MatrixXd &R,
-    Eigen::MatrixXd &P
-    ) : A_(A), C_(C), Q_(Q), R_(R), P_init_(P), num_states_(A.rows()), num_outputs_(C.rows()), x_hat_posteriori_(num_states_), x_hat_priori_(num_states_), filter_initialized_(false) {}
+    Eigen::MatrixXd &P,
+    const double dt
+    ) : A_(A), C_(C), Q_(Q), R_(R), P_init_(P), num_states_(A.rows()), num_outputs_(C.rows()), x_hat_posteriori_(num_states_), x_hat_priori_(num_states_), filter_initialized_(false), dt_(dt) {}
 
 void BasicKalmanFilter::initialize_filter() {
     x_hat_posteriori_.setZero();

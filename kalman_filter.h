@@ -15,7 +15,8 @@ class BasicKalmanFilter {
             const Eigen::MatrixXd &C,
             const Eigen::MatrixXd &Q,  
             const Eigen::MatrixXd &R,
-            Eigen::MatrixXd &P
+            Eigen::MatrixXd &P,
+            const double dt
         );
 
         /// Initialize the filter zero initial states
@@ -26,7 +27,7 @@ class BasicKalmanFilter {
         /// \param[in] init_states initial states of the filter
         void initialize_filter(double t_init, const Eigen::VectorXd &init_states);
 
-        /// Predict step for the filter when a measurement is received
+        /// Predict step for the filter when measurement is not received
         void predict_filter_step();
 
         /// Update step for the filter when a measurement is received
@@ -58,10 +59,10 @@ class BasicKalmanFilter {
         double last_update_step_time;
 
         /// System equation : X' = A.X ; Y = C.X 
-        /// \A : system dynamics matrix
-        /// \C : output matrix
-        /// \Q : process noise covariance
-        /// \R : measurement noise covariance
+        /// \A_ : system dynamics matrix
+        /// \C_ : output matrix
+        /// \Q_ : process noise covariance
+        /// \R_ : measurement noise covariance
         /// \P_init_ : initial estimate error covariance
         /// \P_ : estimate error covariance
         /// \K_gain_ : Kalman gain
@@ -77,10 +78,15 @@ class BasicKalmanFilter {
         const std::size_t num_states_;
         const std::size_t num_outputs_;
 
-        /// Estimates states : priori, posteriori
+        /// Estimated states : priori, posteriori
         Eigen::VectorXd x_hat_priori_;
         Eigen::VectorXd x_hat_posteriori_;
 
         /// Flag to check if the filter is initialized
         bool filter_initialized_;
 };  
+
+/// A placeholder in order to make sure the code compiles fine
+int main(int argc, char* argv[]) {
+    std::cout << "\nThis is a cpp implementation of a basic Kalman filter class.\nDerive from this class/ use an object of this class to use the filter in your applications.\n";
+}
