@@ -12,7 +12,7 @@ to the location of the eigen library directory.
 
 Library can be built using the following steps:
 cd <root project directory>
-# place all the source, include, and CMake files in the above directory
+<place all the source, include, and CMake files in the above directory>
 mkdir build && cd build
 cmake ..
 make ..
